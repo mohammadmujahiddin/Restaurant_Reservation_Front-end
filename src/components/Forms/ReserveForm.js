@@ -461,40 +461,43 @@ const ReserveForm = () => {
                     </StepContent>
                 </Step>
             </Stepper>
-            {activeStep === steps.length && (
-                <Box sx={{ width: '33.3%' }} style={{ margin: 'auto 33.3%' }}>
-                    <div className='mt-3 d-flex justify-content-around'>
-                        <Grid container rowSpacing={2} columnSpacing={{xs: 1, sm: 2, md: 3}}>
-                            <Grid item xs={12}>
-                                {(confirmApiResponse) && 
-                                    <Typography className='text-center' variant='h5'>{confirmApiResponse}</Typography>
-                                }
-                            </Grid>
-                            <Grid item xs={6}>
-                                <Button
-                                    fullWidth
-                                    variant='outlined'
-                                    color='primary'
-                                    onClick={handleReset} 
-                                >
-                                    New Reservation
-                                </Button>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <Link href='/' underline='none'>
-                                    <Button 
-                                        fullWidth
-                                        variant='contained' 
-                                        color='primary' 
-                                    >
-                                        Back to Home Page
-                                    </Button>
-                                </Link>
-                            </Grid>
-                        </Grid>
-                    </div>
-                </Box>
-            )}
+            
+
+{activeStep === steps.length && (
+    <Box sx={{ width: '33.3%' }} style={{ margin: 'auto 33.3%' }}>
+        <div className='mt-3 d-flex justify-content-around'>
+            <Grid container rowSpacing={2} columnSpacing={{xs: 1, sm: 2, md: 3}}>
+                <Grid item xs={12}>
+                    {(confirmApiResponse) && 
+                        <Typography className='text-center' variant='h5'>{confirmApiResponse}</Typography>
+                    }
+                </Grid>
+                <Grid item xs={6}>
+                    <Button
+                        fullWidth
+                        variant='outlined'
+                        color='primary'
+                        onClick={handleReset} 
+                    >
+                        New Reservation
+                    </Button>
+                </Grid>
+                <Grid item xs={6}>
+                    <Link href='/' underline='none'>
+                        <Button 
+                            fullWidth
+                            variant='contained' 
+                            color='primary' 
+                        >
+                            Back to Home Page
+                        </Button>
+                    </Link>
+                </Grid>
+            </Grid>
+        </div>
+    </Box>
+)}
+
         </Box>
     )
 }
