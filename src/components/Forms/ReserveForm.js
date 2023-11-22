@@ -387,8 +387,8 @@ const ReserveForm = () => {
                                         fullWidth
                                         // className='mt-3'
                                         label='Phone Number'
-                                        onlyCountries={['US']}
-                                        defaultCountry='US'
+                                        onlyCountries={['IN', 'US']}
+                                        defaultCountry='IN'
                                         value={(token) ? userData.phoneNumber : phoneNumber}
                                         onChange={(newValue) => {
                                             matchIsValidTel(newValue);

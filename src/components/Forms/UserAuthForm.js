@@ -21,7 +21,7 @@ const LoginForm = () => {
   };
 
   const validationLoginForm = Yup.object().shape({
-    phoneLogin: Yup.string().phone('US', true, 'Phone number is invalid')
+    phoneLogin: Yup.string().phone('IN' || 'US', true, 'Phone number is invalid')
       .required(),
     passwordLogin: Yup.string()
       .required('Password is required')
@@ -38,7 +38,7 @@ const LoginForm = () => {
       .required('Also your last name!')
       .min(1, 'First name must be at least 1 characters')
       .max(20, 'Your last name is that long? Can we have the shorter one?'),
-    phoneRegister: Yup.string().phone('US', true, 'Phone number is invalid')
+    phoneRegister: Yup.string().phone('IN' || 'US', true, 'Phone number is invalid')
       .required(),
     passwordRegister: Yup.string()
       .required('Password is required')
@@ -149,8 +149,8 @@ const LoginForm = () => {
                 render={({ field }) => (
                   <MuiTelInput
                     fullWidth
-                    onlyCountries={['US']}
-                    defaultCountry="US"
+                    onlyCountries={['IN', 'US']}
+                    defaultCountry="IN"
                     label='Phone Number'
                     margin='normal'
                     {...field}
@@ -231,8 +231,8 @@ const LoginForm = () => {
                 render={({ field }) => (
                   <MuiTelInput
                     fullWidth
-                    onlyCountries={['US']}
-                    defaultCountry="US"
+                    onlyCountries={['IN', 'US']}
+                    defaultCountry="IN"
                     label='Phone Number'
                     margin='normal'
                     {...field}
