@@ -19,10 +19,10 @@ const App = () => {
                 <Navbar />
                 <Routes>
                     <Route path='/' index element={<Home />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/reserve' element={<Reserve />} />
-                    <Route path='/user' element={<User />} />
-                    <Route path='/check-reservation' element={<CheckReservation />} />
+                    <Route path='https://rest-back-zwr4-9kfuj8j5o-mohammadmujahiddins-projects.vercel.app//login' element={<Login />} />
+                    <Route path='https://rest-back-zwr4-9kfuj8j5o-mohammadmujahiddins-projects.vercel.app//reserve' element={<Reserve />} />
+                    <Route path='https://rest-back-zwr4-9kfuj8j5o-mohammadmujahiddins-projects.vercel.app//user' element={<User />} />
+                    <Route path='https://rest-back-zwr4-9kfuj8j5o-mohammadmujahiddins-projects.vercel.app//check-reservation' element={<CheckReservation />} />
                     <Route path='*' element={<Page404 />} />
                 </Routes>
             </Suspense>
